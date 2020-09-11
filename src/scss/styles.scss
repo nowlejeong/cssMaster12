@@ -1,77 +1,104 @@
 @import "_variables";
 @import "_mixins";
 @import "_reset";
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #dde1d4;
-  padding: 15px;
-  background-color: #dde1d4;
-  font-family: "DM Serif Display", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "Permanent Marker", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 100%;
   height: 100vh;
 }
-
-main {
+header {
   width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-areas:
-    "box1 box1 box2 box2"
-    "box1 box1 box2 box2"
-    "box3 box3 box4 box5"
-    "box3 box3 box6 box7";
-  .box1 {
-    background-color: #d9e8de;
-    grid-area: box1;
-    color: #f8420c;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 85px;
+    padding-bottom: 20px;
   }
+}
+main {
+  height: 85vh;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(200px, auto));
+  grid-template-rows: repeat(2, 1fr);
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    h2 {
+      font-size: 25px;
+    }
+    span {
+      font-size: 12px;
+      font-weight: 300;
+    }
+  }
+  // grid-template-areas: ;
+  .box1 {
+    // grid-area: box1;
+    background-color: #bfbda7;
+  }
+
   .box2 {
-    background-color: #018b69;
-    grid-area: box2;
+    // grid-area: box2;
+    background-image: url("https://source.unsplash.com/780x560/?wallpaper");
+    background-size: cover;
   }
   .box3 {
-    background-color: #f4470b;
-    grid-area: box3;
+    // grid-area: box3;
+    background-color: #fe4915;
+    // color: white;
   }
   .box4 {
-    background-color: #f7abc5;
-    grid-area: box4;
-    color: #f8420c;
-    font-size: 45px;
+    // grid-area: box4;
+    background-image: url("https://source.unsplash.com/780x561/?wallpaper");
+    background-size: cover;
   }
   .box5 {
-    background-color: #605fa9;
-    grid-area: box5;
-    font-size: 45px;
+    // grid-area: box5;
+    background-color: #847f96;
+    // color: white;
   }
   .box6 {
-    background-color: #ffc127;
-    grid-area: box6;
-    color: #f8420c;
-    font-size: 45px;
+    // grid-area: box6;
+    background-color: #d1ff71;
   }
   .box7 {
-    background-color: #f97374;
-    grid-area: box7;
-    font-size: 45px;
+    // grid-area: box7;
+    background-color: #993433;
+    // color: white;
   }
-  div {
-    color: white;
-    font-size: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    span {
-      transform: rotateZ(-15deg);
-      // margin: 0 -2px;
-    }
+  .box8 {
+    // grid-area: box8;
+    background-color: #39aaf9;
+  }
+  .box9 {
+    // grid-area: box9;
+    background-image: url("https://source.unsplash.com/780x562/?wallpaper");
+    background-size: cover;
+  }
+  .box10 {
+    // grid-area: box10;
+    background-color: #42907a;
+  }
+  .box11 {
+    // grid-area: box11;
+    background-image: url("https://source.unsplash.com/780x563/?wallpaper");
+    background-size: cover;
+  }
+  .box12 {
+    // grid-area: box12;
+    background-color: #e3c4e5;
   }
 }
